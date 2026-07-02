@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Munira Lambuwale — Full Stack & AI Developer</title>
+  <meta name="description"
+    content="Final-year Computer Engineering student at AIKTC Mumbai. Full Stack Developer and AI/ML enthusiast building systems that matter." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/1.35.0/iconfont/tabler-icons.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a class="logo" href="#">munira<span>.</span></a>
+    <div class="nav-links">
+      <a onclick="go('about')">About</a>
+      <a onclick="go('projects')">Projects</a>
+      <a onclick="go('skills')">Skills</a>
+      <a onclick="go('certs')">Certifications</a>
+      <a onclick="go('exp')">Experience</a>
+      <a onclick="go('contact')">Contact</a>
+    </div>
+    <button class="hamburger" id="hbg" onclick="toggleMenu()" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a onclick="go('about');closeMenu()">About</a>
+    <a onclick="go('projects');closeMenu()">Projects</a>
+    <a onclick="go('skills');closeMenu()">Skills</a>
+    <a onclick="go('certs');closeMenu()">Certifications</a>
+    <a onclick="go('exp');closeMenu()">Experience</a>
+    <a onclick="go('contact');closeMenu()">Contact</a>
+  </div>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div>
+      <div class="h-eyebrow"><span class="h-dot"></span>Available for internships</div>
+      <h1 class="hn">Munira<br><em>Lambuwale</em></h1>
+      <div class="typed-w"><span id="typed"></span><span id="cur"></span></div>
+      <p class="hero-p">Final-year CS student who loves building things that <em>actually matter</em> — AI that fights
+        misinformation, apps that connect people, systems that make everyday life a little smarter.</p>
+      <div class="hero-btns">
+        <a class="btn-gold" onclick="go('projects')">
+          <i class="ti ti-layout-grid"></i>See my work
+        </a>
+        <a class="btn-out" href="https://mail.google.com/mail/?view=cm&fs=1&to=muniralambuwale1565@gmail.com"
+          target="_blank">
+          <i class="ti ti-mail"></i>Get in touch
+        </a>
+        <a class="btn-out" href="Munira_Resume.pdf" target="_blank">
+          <i class="ti ti-download"></i>Resume
+        </a>
+      </div>
+    </div>
+    <div class="hero-r">
+      <div class="hc gld">
+        <div class="hc-n">4+</div>
+        <div class="hc-l">Live & active projects</div>
+      </div>
+      <div class="hc">
+        <div class="hc-n" style="color:var(--text);font-size:1.3rem">Final Year</div>
+        <div class="hc-l">B.E. Computer Engg · 2027</div>
+      </div>
+      <div class="hc">
+        <div class="hc-n" style="color:var(--text);font-size:1.3rem">Full Stack</div>
+        <div class="hc-l">& AI / ML Development</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divhr">
+    <hr>
+  </div>
+
+  <!-- ABOUT -->
+  <div class="wrap" id="about">
+    <div class="ey reveal">About</div>
+    <h2 class="sh reveal">A little about me</h2>
+    <div class="about-grid">
+      <div class="ab w2 reveal delay-1">
+        <div class="ab-label">Who I am</div>
+        <div class="ab-body">I'm Munira — a final-year Computer Engineering student from Mumbai. I started with web
+          development and got pulled into AI/ML because I wanted my apps to do more than just store and display data. I
+          build systems that think, connect people, and solve problems that actually matter.</div>
+      </div>
+      <div class="ab reveal delay-2">
+        <div class="ab-label">Education</div>
+        <div class="ab-title">AIKTC, University of Mumbai</div>
+        <div class="ab-body" style="margin-top:.3rem">B.E. Computer Engineering<br>2023 – 2027 · <span
+            style="color:var(--gold)">CGPI 9.1 / 10</span></div>
+      </div>
+      <div class="ab w2 reveal delay-3">
+        <div class="ab-label">Strengths</div>
+        <div class="sm-chips">
+          <span class="smc g">Fast learner</span>
+          <span class="smc g">Self-driven</span>
+          <span class="smc g">Problem solver</span>
+          <span class="smc">Team player</span>
+          <span class="smc">Detail-oriented</span>
+          <span class="smc">Clear communicator</span>
+        </div>
+      </div>
+      <div class="ab reveal delay-4">
+        <div class="ab-label">Currently</div>
+        <div class="ab-body">Finishing final year, deepening ML skills, and actively looking for a full-stack or AI/ML
+          internship.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divhr">
+    <hr>
+  </div>
+
+  <!-- PROJECTS -->
+  <div class="wrap" id="projects">
+    <div class="ey reveal">Projects</div>
+    <h2 class="sh reveal">Things I've built</h2>
+    <p class="sub reveal">AI systems and full-stack applications built for real impact.</p>
+    <div class="proj-grid">
+      <a class="pc ai-card reveal delay-1" href="#">
+        <div class="pc-top">
+          <div class="pc-name">Fake News & Hate Speech Detection</div>
+          <span class="pc-arrow"><i class="ti ti-arrow-up-right"></i></span>
+        </div>
+        <div style="margin-bottom:.75rem"><span class="pc-type ai">AI · NLP · Computer Vision</span></div>
+        <p class="pc-desc">Detects fake news and hate speech across text, images, videos, and YouTube URLs using OCR,
+          NLP, and ML classification with explainable results.</p>
+        <div class="pc-tags">
+          <span class="pt g">Python</span><span class="pt g">TensorFlow</span><span class="pt g">BERT</span><span
+            class="pt g">NLP</span><span class="pt g">OCR</span><span class="pt g">OpenCV</span><span
+            class="pt">React</span><span class="pt">Flask</span>
+        </div>
+      </a>
+      <a class="pc ai-card reveal delay-2" href="#">
+        <div class="pc-top">
+          <div class="pc-name">SafeScan AI — Ingredient Intelligence</div>
+          <span class="pc-arrow"><i class="ti ti-arrow-up-right"></i></span>
+        </div>
+        <div style="margin-bottom:.75rem"><span class="pc-type ai">AI · Computer Vision · OCR</span></div>
+        <p class="pc-desc">Scans food and cosmetic product labels to identify harmful ingredients, allergens,
+          adulterants, and health risks using CNN and OCR.</p>
+        <div class="pc-tags">
+          <span class="pt g">Python</span><span class="pt g">TensorFlow</span><span class="pt g">CNN</span><span
+            class="pt g">OpenCV</span><span class="pt g">OCR</span><span class="pt">React</span><span
+            class="pt">Flask</span>
+        </div>
+      </a>
+      <a class="pc reveal delay-3" href="https://qpass.onrender.com" target="_blank">
+        <div class="pc-top">
+          <div class="pc-name">QPASS</div>
+          <span class="pc-arrow"><i class="ti ti-arrow-up-right"></i></span>
+        </div>
+        <div style="margin-bottom:.75rem"><span class="pc-type fs">Full Stack</span></div>
+        <p class="pc-desc">Smart bus pass management with QR-based verification, real-time admin approval, and
+          e-document validation before pass generation.</p>
+        <div class="pc-tags">
+          <span class="pt">Node.js</span><span class="pt">MongoDB</span><span class="pt">QR codes</span><span
+            class="pt">Auth</span><span class="pt live">Live</span>
+        </div>
+      </a>
+      <a class="pc reveal delay-4" href="https://lifelink-ckgo.onrender.com" target="_blank">
+        <div class="pc-top">
+          <div class="pc-name">LifeLink</div>
+          <span class="pc-arrow"><i class="ti ti-arrow-up-right"></i></span>
+        </div>
+        <div style="margin-bottom:.75rem"><span class="pc-type fs">Full Stack</span></div>
+        <p class="pc-desc">Secure tissue donation platform with role-based access, file uploads, session-based
+          authentication, and optimized MongoDB schemas.</p>
+        <div class="pc-tags">
+          <span class="pt">Express.js</span><span class="pt">MongoDB</span><span class="pt">Auth</span><span
+            class="pt live">Live</span>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="divhr">
+    <hr>
+  </div>
+
+  <!-- SKILLS -->
+  <div class="wrap" id="skills">
+    <div class="ey reveal">Skills</div>
+    <h2 class="sh reveal">My toolkit</h2>
+    <div class="sk-grid">
+      <div class="sk gold-border reveal delay-1">
+        <div class="sk-lbl">Machine Learning</div>
+        <div class="sk-ps"><span class="sp g">Python</span><span class="sp g">TensorFlow</span><span
+            class="sp g">Scikit-learn</span><span class="sp g">CNN</span><span class="sp g">BERT</span><span
+            class="sp g">NLP</span><span class="sp g">OCR</span><span class="sp g">OpenCV</span></div>
+      </div>
+      <div class="sk gold-border reveal delay-2">
+        <div class="sk-lbl">AI Concepts</div>
+        <div class="sk-ps"><span class="sp g">Text Classification</span><span class="sp g">Computer Vision</span><span
+            class="sp g">Image Processing</span><span class="sp g">Feature Engineering</span><span class="sp g">Model
+            Evaluation</span></div>
+      </div>
+      <div class="sk reveal delay-3">
+        <div class="sk-lbl">Data</div>
+        <div class="sk-ps"><span class="sp">Pandas</span><span class="sp">NumPy</span><span class="sp">Matplotlib</span>
+        </div>
+      </div>
+      <div class="sk reveal delay-1">
+        <div class="sk-lbl">Frontend</div>
+        <div class="sk-ps"><span class="sp">React.js</span><span class="sp">JavaScript</span><span
+            class="sp">HTML5</span><span class="sp">CSS3</span><span class="sp">Tailwind CSS</span><span
+            class="sp">Bootstrap</span></div>
+      </div>
+      <div class="sk reveal delay-2">
+        <div class="sk-lbl">Backend</div>
+        <div class="sk-ps"><span class="sp">Node.js</span><span class="sp">Express.js</span><span
+            class="sp">Flask</span><span class="sp">FastAPI</span><span class="sp">REST APIs</span><span
+            class="sp">Auth</span></div>
+      </div>
+      <div class="sk reveal delay-3">
+        <div class="sk-lbl">Database & Tools</div>
+        <div class="sk-ps"><span class="sp">MongoDB</span><span class="sp">MySQL</span><span class="sp">Git</span><span
+            class="sp">GitHub</span><span class="sp">SEO</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divhr">
+    <hr>
+  </div>
+
+  <!-- CERTIFICATIONS -->
+  <div class="wrap" id="certs">
+    <div class="ey reveal">Certifications</div>
+    <h2 class="sh reveal">What I've earned</h2>
+    <p class="sub reveal">Industry-recognised credentials in AI and machine learning.</p>
+    <div class="cert-grid">
+      <div class="cert-card reveal delay-1">
+        <div class="cert-logo dl">Deep<br>Learning<br>.AI</div>
+        <div class="cert-body">
+          <div class="cert-name">Supervised Machine Learning: Regression and Classification</div>
+          <div class="cert-issuer">DeepLearning.AI · Stanford University</div>
+          <div class="cert-sub">Course Certificate · Authorized by Andrew Ng via Coursera</div>
+          <div class="cert-meta">
+            <span class="cert-year">Jan 2026</span>
+            <span style="color:var(--tm)">·</span>
+            <a class="cert-verify" href="https://coursera.org/verify/6JT1JQHU034E" target="_blank">↗ Verify on
+              Coursera</a>
+          </div>
+        </div>
+      </div>
+      <div class="cert-card reveal delay-2">
+        <div class="cert-logo aws">aws</div>
+        <div class="cert-body">
+          <div class="cert-name">Fundamentals of Machine Learning and Artificial Intelligence</div>
+          <div class="cert-issuer">AWS Training & Certification</div>
+          <div class="cert-sub">Completion Certificate · Amazon Web Services</div>
+          <div class="cert-meta">
+            <span class="cert-year">Aug 2025</span>
+            <span style="color:var(--tm)">·</span>
+            <a class="cert-verify"
+              href="https://drive.google.com/file/d/1knU-VeOT--gFkobX_VR1PmFX9azt8o9T/view?usp=drive_link"
+              target="_blank">↗ View certificate</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="divhr">
+    <hr>
+  </div>
+
+  <!-- EXPERIENCE -->
+  <div class="wrap" id="exp">
+    <div class="ey reveal">Experience</div>
+    <h2 class="sh reveal">Where I've worked</h2>
+    <div class="ei reveal delay-1">
+      <div>
+        <div class="ed">Aug – Nov 2025</div>
+        <div class="ebadge">Internship</div>
+      </div>
+      <div>
+        <div class="er">SEO & SEM Engineer Intern</div>
+        <div class="ec">VITHUB</div>
+        <ul class="ep">
+          <li>Developed SEO and SEM strategies to improve website visibility and organic traffic</li>
+          <li>Conducted keyword research, on-page optimization, and competitor analysis</li>
+          <li>Assisted in planning and managing Google Ads campaigns</li>
+          <li>Analyzed site metrics and prepared optimization reports using analytics tools</li>
+        </ul>
+        <a class="ca" href="https://drive.google.com/file/d/1C4pc4GAPFNm5pupKcMcca7tWIThjYjiU/view" target="_blank">
+          <i class="ti ti-certificate" style="font-size:13px"></i> View certificate
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="divhr">
+    <hr>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="wrap" id="contact">
+    <div class="ey reveal">Contact</div>
+    <h2 class="sh reveal">Let's build something</h2>
+    <div class="ch reveal delay-1">
+      <div class="ch-bg"></div>
+      <h3>Open to opportunities</h3>
+      <p>Full-stack or AI/ML internships, collaborations, or a good conversation about tech.</p>
+      <div class="cg">
+        <a class="cl" href="mailto:muniralambuwale1565@gmail.com">
+          <i class="ti ti-mail"></i>
+          <div>
+            <div class="cl-lbl">Email</div>muniralambuwale1565@gmail.com
+          </div>
+        </a>
+        <a class="cl" href="https://linkedin.com/in/munira-lambuwale-014851291" target="_blank">
+          <i class="ti ti-brand-linkedin"></i>
+          <div>
+            <div class="cl-lbl">LinkedIn</div>munira-lambuwale-014851291
+          </div>
+        </a>
+        <a class="cl" href="https://github.com/munira1565" target="_blank">
+          <i class="ti ti-brand-github"></i>
+          <div>
+            <div class="cl-lbl">GitHub</div>github.com/munira1565
+          </div>
+        </a>
+        <a class="cl" href="tel:+919987493308">
+          <i class="ti ti-phone"></i>
+          <div>
+            <div class="cl-lbl">Phone</div>+91 99874 93308
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <span>Munira Lambuwale · Mumbai </span>
+    <span class="fl">Full Stack & AI Developer</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
